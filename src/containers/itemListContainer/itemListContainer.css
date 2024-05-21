@@ -1,0 +1,11 @@
+.bg-fondo-item {
+    background-color: rgb(231, 230, 230);
+}
+
+.card {
+    margin: 20px auto ;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
