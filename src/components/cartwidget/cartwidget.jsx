@@ -1,6 +1,6 @@
 import Badge from 'react-bootstrap/Badge';
 
-const CardWidget = () => {
+const CartWidget = () => {
     return(
         <>
             <div className='me-5'>
@@ -13,4 +13,4 @@ const CardWidget = () => {
     )
 }
 
-export default CardWidget
+export default CartWidget

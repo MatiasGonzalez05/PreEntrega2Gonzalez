@@ -1,13 +1,23 @@
-import Card from 'react-bootstrap/Card';
 import './itemListContainer.css';
-const ItemListContainer = ({ greeting }) => {
+import { pedirDatos } from '../../helpers/pedirDatos';
+import { useEffect, useState } from 'react';
+import ItemList from '../../components/ItemList/ItemList';
+
+
+const ItemListContainer = () => {
+    const [productos, setProductos] = useState([]);
+
+    useEffect(() => {
+        pedirDatos()
+            .then((res) => {
+                setProductos(res);
+            })
+    },[])
+
     return(
-        <Card className='bg-fondo-item'>
-            <Card.Body> 
-                <h2>{greeting}</h2>
-            </Card.Body>
-        </Card>
-        
+        <>
+            <ItemList productos={productos}/>
+        </>
     )
 }
 

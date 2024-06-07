@@ -2,10 +2,14 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import CardWidget from '../cardwidget/cardwidget';
+import CartWidget from '../cartwidget/cartwidget';
 import './navbar.css';
 
-const NavBar = () => {
+const NavBar = ({ handleCategoria }) => {
+    const cambiarCategoria = (categoria) => {
+        handleCategoria(categoria)
+    }
+
     return(
         <>
             <div>
@@ -16,19 +20,16 @@ const NavBar = () => {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto me-4 fs-5 d-flex ">
-                            <Nav.Link href="#home">Home</Nav.Link>
+                            <Nav.Link href="#home" onClick={() => cambiarCategoria('todos')}>Home</Nav.Link>
                             <NavDropdown title="Productos" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Iphone</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Ipads
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">MacBooks</NavDropdown.Item>
-                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.1" onClick={() => cambiarCategoria('celulares')}>Iphone</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2" onClick={() => cambiarCategoria('ipad')}>Ipads</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3" onClick={() => cambiarCategoria('macbook')}>MacBooks</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="#link">Contacto</Nav.Link>
                         </Nav>
                         
-                        <CardWidget />
+                        <CartWidget />
                         </Navbar.Collapse>
                         
                     </Container>
