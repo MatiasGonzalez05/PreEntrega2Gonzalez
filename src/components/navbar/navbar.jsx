@@ -4,10 +4,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../cartwidget/cartwidget';
 import './navbar.css';
+import { Link } from 'react-router-dom';
 
 const NavBar = ({ handleCategoria }) => {
     const cambiarCategoria = (categoria) => {
-        handleCategoria(categoria)
+        handleCategoria(categoria);
     }
 
     return(
@@ -16,17 +17,20 @@ const NavBar = ({ handleCategoria }) => {
                 <Navbar expand="lg" className="bg-fondo p-3">
                     <Container>
                     <i className="bi bi-apple fs-1 me-4 mb-2 "></i>
-                        <Navbar.Brand href="#home" className='fs-4'>APPLE STORE</Navbar.Brand>
+                        <Link to="/" className='fs-4'>APPLE STORE</Link>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto me-4 fs-5 d-flex ">
-                            <Nav.Link href="#home" onClick={() => cambiarCategoria('todos')}>Home</Nav.Link>
+                            <Link to="/" >Home</Link>
                             <NavDropdown title="Productos" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1" onClick={() => cambiarCategoria('celulares')}>Iphone</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2" onClick={() => cambiarCategoria('ipad')}>Ipads</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3" onClick={() => cambiarCategoria('macbook')}>MacBooks</NavDropdown.Item>
+                                {/* <li><Link to="/productos/Todos" >Todos</Link></li> */}
+                                <li><Link to="/productos/celulares" >Celulares</Link></li>
+                                <li><Link to="/productos/ipad" >Ipads</Link></li>  {/* cambiar las categorias del json para que quede con mis productos apple */}
+                                <li><Link to="/productos/macbook" >MacBooks</Link></li>
+                                <li><Link to="/productos/watch" >Relojes</Link></li>
+                                <li><Link to="/productos/vision-pro" >Vision Pro</Link></li>
                             </NavDropdown>
-                            <Nav.Link href="#link">Contacto</Nav.Link>
+                            <Link to="/contacto">Contacto</Link> {/* agregar clases para el nav css */}
                         </Nav>
                         
                         <CartWidget />

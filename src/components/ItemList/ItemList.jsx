@@ -1,11 +1,12 @@
 import Item from "../Item/Item";
 import "./ItemList.css";
+import { toCapital } from "../../helpers/toCapital";
 
-const ItemList = ({ productos }) => {
+const ItemList = ({ productos, titulo }) => {
     return (
-        <div>
-            <h2>Productos</h2>
-            <div className="productos">
+        <div > {/* hacer un container para el listado que sea el mismo que el de itemlistcontainer*/}
+            <h2>{toCapital(titulo)}</h2>
+            <div className="menu-productos">
                 {productos.map((prod) => <Item producto={prod} key={prod.id} />)}
             </div>
         </div>
