@@ -4,7 +4,7 @@ const CartWidget = () => {
     return(
         <>
             <div className='me-5'>
-                <i className="bi bi-cart-fill fs-4 "></i>
+                <i className="bi bi-cart-fill fs-4 container-cartwidget"></i>
                 <Badge bg="secondary" className='position-absolute m-right-3'>
                 1
                 </Badge>
