@@ -1,5 +1,5 @@
 import './itemListContainer.css';
-import { pedirDatos } from '../../helpers/pedirDatos';
+import { pedirDatos } from '../../helpers/asynckmock';
 import { useEffect, useState } from 'react';
 import ItemList from '../../components/ItemList/ItemList';
 import { useParams } from 'react-router-dom';
