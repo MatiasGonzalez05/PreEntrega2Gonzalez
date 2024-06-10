@@ -7,6 +7,7 @@ const Item = ({ producto }) => {
     return(
         <>
             <Card className='cardp'> 
+                ashe
                 <Card.Img variant="top" src={producto.imagen} />
                     <Card.Title>{producto.titulo}</Card.Title>
                     <Card.Text>Precio: U$D{producto.precio}</Card.Text>
