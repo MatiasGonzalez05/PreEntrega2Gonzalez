@@ -1,5 +1,3 @@
-import './BannerHeader.css';
-
 const BannerHeader = () => {
     return(
         <>

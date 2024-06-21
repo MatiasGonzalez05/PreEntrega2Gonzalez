@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../cartwidget/cartwidget';
-import './navbar.css';
+/* import './navbar.css'; */
 import { Link } from 'react-router-dom';
 import BannerHeader from '../BannerHeader/BannerHeader';
 import Slider from '../Slider/Slider';
@@ -28,8 +28,9 @@ const NavBar = () => {
                                 <li><Link className="text-nav color-text" to="/productos/vision-pro" >Vision Pro</Link></li>
                             </NavDropdown>
                             <Link className="text-nav color-text" to="/contacto">Contacto</Link> 
+                            <Link><CartWidget className="nav-contaner" /></Link>
                         </Nav>
-                        <CartWidget className="nav-contaner" />
+                        
                         </Navbar.Collapse>
                 </Navbar>
                 <BannerHeader />

@@ -1,5 +1,4 @@
 import Item from "../Item/Item";
-import "./ItemList.css";
 import { toCapital } from "../../helpers/toCapital";
 
 const ItemList = ({ productos, titulo }) => {
