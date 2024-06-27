@@ -31,7 +31,10 @@ const Carrito = () => {
                 carrito.length > 0 ?
                 <>
                     <h2 className="container">Precio Total: U$D {precioTotal().toFixed(2)}</h2>  
-                    <a onClick={handleVaciar} className="ver-mas-carrito">Vaciar Carrito</a>
+                    <a onClick={handleVaciar} className="ver-mas-carrito">
+                        <i className="bi bi-trash"></i>
+                    </a>
+                    <a onClick={handleVaciar} className="ver-mas-carrito">Comprar</a>
                 </> :
                 <h2 className="container">El carrito esta vacio... </h2>
             }

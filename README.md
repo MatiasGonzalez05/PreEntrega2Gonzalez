@@ -1,8 +1,29 @@
-# React + Vite
+# Mi proyecto 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Este es un el proyecto final, donde el usuario podra simular una compra de productos, permitiendole ingresar al menu, al detalle del producto, modificar las cantidades, mirar como se acumulan los productos en el carrito, etc. Espero que les guste!
 
-Currently, two official plugins are available:
+## Tecnologías principales:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🛠️ React JS
+
+🛠️ JavaScript
+
+🛠️ HTML
+
+🛠️ CSS
+
+## Algunas librerias:
+
+Para que el proyecto se logre realizar de una manera esperada utilicé las siguientes herramientas:
+
+⚡ React-icons
+
+⚡ React-router-dom: routing de la web
+
+⚡ React-bootstrap: navbar 
+
+⚡ Sweetalert2: aviso email ingresado incorrecto
+
+⚡ React-Firebase: base de datos 
+
+
