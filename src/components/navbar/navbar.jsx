@@ -1,4 +1,3 @@
-
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -26,7 +25,7 @@ const NavBar = () => {
                                 <li><Link className="text-nav color-text" to="/productos/watch" >Relojes</Link></li> <hr />
                                 <li><Link className="text-nav color-text" to="/productos/vision-pro" >Vision Pro</Link></li>
                             </NavDropdown>
-                            <Link><CartWidget className="nav-contaner" /></Link>
+                            <CartWidget className="nav-contaner" />
                         </Nav>
                         
                         </Navbar.Collapse>
