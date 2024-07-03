@@ -38,7 +38,7 @@
     {
         "id": 5,
         "titulo": "Iphone 11",
-        "descripcion": "l iPhone 11 es un smartphone popular conocido por su excelente relación calidad-precio. Ofrece un rendimiento sólido, una cámara dual avanzada y una duración de la batería impresionante. Es ideal para aquellos que buscan un dispositivo de alta calidad a un precio más accesible.",
+        "descripcion": "El iPhone 11 es un smartphone popular conocido por su excelente relación calidad-precio. Ofrece un rendimiento sólido, una cámara dual avanzada y una duración de la batería impresionante. Es ideal para aquellos que buscan un dispositivo de alta calidad a un precio más accesible.",
         "categoria": "celulares",
         "imagen": "/src/data/img/11.webp",
         "precio": 450,

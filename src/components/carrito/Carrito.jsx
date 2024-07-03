@@ -1,13 +1,17 @@
 import { useContext } from "react";
 import CartContext from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
 
 const Carrito = () => {
     
-    const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
+    const { carrito, precioTotal, vaciarCarrito, eliminarProducto } = useContext(CartContext);
     const handleVaciar = () => {
         vaciarCarrito()
     }
+    const handleEliminar = (id) => {
+        eliminarProducto(id);
+      };
 
     return (
         <>
@@ -21,6 +25,9 @@ const Carrito = () => {
                             <p>Precio Unitario: U$D {prod.precio}</p>
                             <p>Precio Total: U$D {prod.precio * prod.cantidad}</p>
                             <p>Cantida: {prod.cantidad}</p>
+                            <button onClick={() => handleEliminar(prod.id)} className="btn-eliminar-producto">
+                            <i className="bi bi-trash"></i>
+                            </button>
                         </div>
                     </div>
                     
@@ -32,9 +39,9 @@ const Carrito = () => {
                 <>
                     <h2 className="container">Precio Total: U$D {precioTotal().toFixed(2)}</h2>  
                     <a onClick={handleVaciar} className="ver-mas-carrito">
-                        <i className="bi bi-trash"></i>
+                        Vaciar Carrito
                     </a>
-                    <a onClick={handleVaciar} className="ver-mas-carrito">Comprar</a>
+                    <Link to="/checkout" className="ver-mas-carrito">Finalzar Compra</Link>
                 </> :
                 <h2 className="container">El carrito esta vacio... </h2>
             }

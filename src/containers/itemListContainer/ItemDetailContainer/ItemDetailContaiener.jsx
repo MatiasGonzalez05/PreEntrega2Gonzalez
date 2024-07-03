@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { pedirItemPorId } from "../../../helpers/asynckmock";
 import ItemDetail from "../../../components/ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import { doc, getDoc} from "firebase/firestore";
+import { db } from '../../../firebase/client';
 
 
 const ItemDetailContainer = () => {
@@ -9,9 +10,12 @@ const ItemDetailContainer = () => {
     const id = useParams().id;
 
     useEffect(() => {
-        pedirItemPorId(Number(id))
-            .then((res) => {
-                setItem(res);
+        const docRef = doc(db, "productos", id);
+        getDoc(docRef)
+            .then((resp) => {
+                setItem(
+                    { ...resp.data(), id: resp.id }
+                )
             })
     }, [id])
 

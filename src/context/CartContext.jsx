@@ -91,13 +91,16 @@ export const CartProvider = ({ children }) => {
     const vaciarCarrito = () => {
         setCarrito([]);
     };
+    const eliminarProducto = (id) => {
+        setCarrito(carrito.filter(producto => producto.id !== id));
+      };
 
     useEffect(() => {
         localStorage.setItem("carrito", JSON.stringify(carrito));
     }, [carrito]);
 
     return (
-        <CartContext.Provider value={{ carrito, agregarAlCarrito, cantidadEnCarrito, precioTotal, vaciarCarrito }}>
+        <CartContext.Provider value={{ carrito, agregarAlCarrito, cantidadEnCarrito, precioTotal, vaciarCarrito, eliminarProducto }}>
             {children}
         </CartContext.Provider>
     );
