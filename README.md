@@ -1,4 +1,4 @@
-# Acerca del proyecto 👀
+# Sobre el proyecto 🚀
 
 > Proyecto final realziado para el curso de React-js de CoderHouse. Se trata de un eccomerce para hacer una simulación de compra, utilizando FireBase para hacer uso de FireStore para el manejo de productos y registros de compras.
 
@@ -32,7 +32,7 @@ npm run dev
 
 ⚙ Vite
 
-## Algunas librerias:
+## Librerías:
 
 Herramientas utilizadas para el proyecto:
 
@@ -46,7 +46,7 @@ Herramientas utilizadas para el proyecto:
 
 ## Firebase / Firestore
 
-- Colección: ```productos```. Cada item tiene las siguientes características:
+- Colección: ```productos```. Cada producto tiene las siguientes características:
 
 |    Campo      |   Tipo        |   Valor       |
 | ------------- | ------------- | ------------- |
