@@ -1,29 +1,60 @@
-# Mi proyecto 🚀
+# Acerca del proyecto 👀
 
-> Este es un el proyecto final, donde el usuario podra simular una compra de productos, permitiendole ingresar al menu, al detalle del producto, modificar las cantidades, mirar como se acumulan los productos en el carrito, etc. Espero que les guste!
+> Proyecto final realziado para el curso de React-js de CoderHouse. Se trata de un eccomerce para hacer una simulación de compra, utilizando FireBase para hacer uso de FireStore para el manejo de productos y registros de compras.
+
+## Instalación usando git clone 🔧
+
+### Para acceder al proyecto clonándolo, deberás ejecutar en consola: 
+```sh
+git clone URL # URL= LINK DEL PROYECTO
+npm install 
+npm run dev
+```
+
+## Instalación descargando comprimido ZIP 🔧
+```sh
+# Ir a “code” > download ZIP
+# Descomprimir el archivo
+# En la carpeta donde se encuentra “package.json” ejecutar en terminal:
+npm install
+npm run dev
+```
 
 ## Tecnologías principales:
 
-🛠️ React JS
+⚙ HTML
 
-🛠️ JavaScript
+⚙ React JS
 
-🛠️ HTML
+⚙ JavaScript
 
-🛠️ CSS
+⚙ CSS
+
+⚙ Vite
 
 ## Algunas librerias:
 
-Para que el proyecto se logre realizar de una manera esperada utilicé las siguientes herramientas:
+Herramientas utilizadas para el proyecto:
 
-⚡ React-icons
+📚 React-router-dom
 
-⚡ React-router-dom: routing de la web
+📚 React-Firebase
 
-⚡ React-bootstrap: navbar 
+📚 React-hook-Form
 
-⚡ Sweetalert2: aviso email ingresado incorrecto
+📚 React-Bootstrap
 
-⚡ React-Firebase: base de datos 
+## Firebase / Firestore
+
+- Colección: ```productos```. Cada item tiene las siguientes características:
+
+|    Campo      |   Tipo        |   Valor       |
+| ------------- | ------------- | ------------- |
+| titulo        |   String      |   Nombre      |
+| categoria     |   String      |   Categoría   |
+| imagen        |   String      |   imagen      |
+| descripcion   |   String      |   descripcion |
+| precio        |   number      |   Precio      |
+| stock         |   number      |   stock       |
 
 
